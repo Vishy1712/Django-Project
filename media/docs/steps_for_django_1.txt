@@ -1,0 +1,45 @@
+STEP 1: CREATE A PROJECT
+STEP 2: PIP INSTALL DJANGO
+
+--- DJANGO INSTALLATION---
+
+STEP 3: CREATED A PROJECT IN DJNAGO NAMED INFOLABZ
+- DJANGO-ADMIN STARTPROJECT INFOLABZ . (FULL STOP IS IMP)
+- PYTHON MANAGE.PY RUNSERVER (TO CHECK DJANGO INSTALLATION)
+
+STEP 4: CREATED A APP
+- DJANGO-ADMIN STARTAPP NEW (APP-NAME)
+- ADD 'new.apps.NewConfig' in settings.py (in project)
+- python manage.py migrate
+
+---- CREATE USER ----
+
+STEP 5: python manage.py createsuperuser
+- enter username(root)
+- enter email address (test@gmail.com)
+- enter password (Pass@123)
+- python manage.py migrate
+- python manage.py runserver
+- click url
+- type /admin in browser url tab.
+- enter username and password.
+
+STEP 6: add class in models.py
+ 	eg: 
+STEP 7: register in admin.py
+	eg: 
+	from .models import book_category, book
+
+	# Register your models here.
+
+	class showbook(admin.ModelAdmin):
+    		list_display = ('ID', 'B_NAME', 'B_INFO', 'B_PRICE', 'B_QUANTITY', 'B_DESCRIPTION', 'B_PAGES', 'CAT_NAME')
+
+	admin.site.register(book,showbook)
+	admin.site.register(book_category)
+
+STEP 8: python manage.py makemigations
+
+STEP 9: python manage.py migrate
+
+STEP 10: python manage.py runserver
